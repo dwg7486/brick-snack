@@ -1,11 +1,12 @@
 ![BrickSnack](https://github.com/dwg7486/brick-snack/blob/master/assets/img/Title.png)
 
 BrickSnack is an incomplete hackathon project for [BrickHack 6](https://brickhack6.devpost.com/).
-Team Members
+
+Team Members:
 
 * Chidinma Umenwofor-Nweze
-* David Grzebinski
 * Christopher Sacchi
+* David Grzebinski
 
 
 ## Inspiration
