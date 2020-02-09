@@ -1,24 +1,35 @@
-# README
+BrickSnack is an incomplete hackathon project for [BrickHack 6](https://brickhack6.devpost.com/).
+Team Members
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Chidinma Umenwofor-Nweze
+* David Grzebinski
+* Christopher Sacchi
 
-Things you may want to cover:
 
-* Ruby version
+## Inspiration
 
-* System dependencies
+Hungry Hungry Hippos was a major source of inspiration. We all also wanted to try game development and learn something new.
 
-* Configuration
+## What it does
 
-* Database creation
+BrickSnack allows four players to munch bricks for points, in a similar format to Hungry Hungry Hippos.
 
-* Database initialization
+## How we built it
 
-* How to run the test suite
+We built it using Phaser on a Rails server to allow for multiplayer action. The art for the game was made using Figma. 
 
-* Services (job queues, cache servers, search engines, etc.)
+## Challenges we ran into
 
-* Deployment instructions
+Phaser proved to be incredibly finicky and it kept us behind for hours. Identical code to Phaser demos would produce different results for us. We also had a small team and that made it 
 
-* ...
+## Accomplishments that we're proud of
+
+Creating our first game!
+
+## What we learned
+
+The basics of game development. It was eye-opening to see how much work goes into making even a simple game (in less than 24 hours).
+
+## What's next for BrickSnack
+
+BrickSnack can be expanded to allow for more players to play against each other in a battle royale. Furthermore, BrickSnack can be re-envisioned as a platform game, in which hippos traverse the menacing RIT savanna to eat bricks to their hearts content.
