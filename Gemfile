@@ -63,7 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # custom gems
 gem 'jquery-rails'
-gem 'phaser-rails'
 gem 'webpacker'
 gem 'mongo'
 gem 'mongoid', '~> 7.0.5'
