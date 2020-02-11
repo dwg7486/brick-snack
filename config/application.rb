@@ -29,6 +29,11 @@ module Example
     config.assets.enabled = true
     config.force_ssl = true
 
+    config.after_initialize do
+        Arena.destroy_all
+        $arenas = [Arena.new(players: [nil, nil, nil, nil]), Arena.new(players: [nil, nil, nil, nil]), Arena.new(players: [nil, nil, nil, nil]), Arena.new(players: [nil, nil, nil, nil]), Arena.new(players: [nil, nil, nil, nil]), Arena.new(players: [nil, nil, nil, nil]), Arena.new(players: [nil, nil, nil, nil]), Arena.new(players: [nil, nil, nil, nil])]
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

@@ -61,5 +61,5 @@ class User
         )
     end
     user
-end
+  end
 end

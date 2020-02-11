@@ -1,17 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Bricksnack</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" ar$
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="/">Home</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/arena">Arena</a>
+        <a class="nav-link" href="#">Arena</a>
       </li>
 
       <li class="nav-item">
@@ -29,7 +29,28 @@
   </div>
 </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+<% if @server_busy %>
+
+<h1>The server is busy. Please refresh the page.</h1>
+
+<% else %>
+
+<p>Game will start once there are four players.</p>
+
+<% if current_user[:inGame] == true %>
+<% else %>
+<% player = 0 %>
+<% while player < 4 %>
+<% break if $arenas[current_user[:server]][player] == nil %>
+<% player += 1 %>
+<% end %>
+<% $arenas[current_user[:server]][player] = 1 %>
+<% current_user[:inGame] = true %>
+<% end %>
+
+<% while $arenas[current_user[:server]].players.all? { |x| x == nil } %>
+
+<% end %>
 
 <script>
 const WIDTH = 720;
@@ -86,7 +107,7 @@ var player;
 
 function preload ()
 {
-    this.load.setBaseURL('https://bricksnack.csharpemcee.com/game');
+    this.load.setBaseURL('http://localhost:8000/');
 
     this.load.image('bg', 'assets/img/background.jpg');
     this.load.image('brick_1', 'assets/img/brick_01.png');
@@ -145,4 +166,7 @@ function update()
 {
     player.doUpdate()
 }
+
 </script>
+
+<% end %>
